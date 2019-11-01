@@ -11,6 +11,9 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    semi: ['error', 'never'],
+    // 代码使用4个空格的缩进风格
+    indent: ['error', 4],
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
