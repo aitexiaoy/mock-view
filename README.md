@@ -1,5 +1,5 @@
 # mock-view
--> 可视化的mock工具
+- > 可视化的mock工具
 
 ## Project setup
 ```
@@ -40,9 +40,9 @@ npm run test:unit
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODO
-- [] 根据接口请求自动添加接口列表 websocket
-- [] 接口参数自定义 分为固定参数以及随机参数，能根据不同的参数返回不同的数据
-- [] 接口归类，分组。考虑到分组的层级不确定性，采用平行目录储存
+- [ ] 根据接口请求自动添加接口列表 websocket
+- [ ] 接口参数自定义 分为固定参数以及随机参数，能根据不同的参数返回不同的数据
+- [ ] 接口归类，分组。考虑到分组的层级不确定性，采用平行目录储存
 ```
 {
     type:'file|axio' 文件夹，接口
@@ -50,5 +50,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     children:[],
 }
 ```
-- [] 全局定义代理，请求真正的接口，请求成功后将数据回填（可配置）也可以单接口配置
-- [] 容错管理
+- [ ] 全局定义代理，请求真正的接口，请求成功后将数据回填（可配置）也可以单接口配置
+- [ ] 容错管理
