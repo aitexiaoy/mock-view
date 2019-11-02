@@ -1,41 +1,41 @@
 <template>
-  <div id="app">
-    <a-layout>
-      <a-layout-header>
-        <Header/>
-      </a-layout-header>
-      <a-layout>
-        <a-layout-sider>
-          <Silder/>
-        </a-layout-sider>
-        <a-layout-content>Content</a-layout-content>
-      </a-layout>
-    </a-layout>
-  </div>
+<div id="app">
+    <AppHeader />
+    <div class="main">
+        <AppSilder />
+        <router-view></router-view>
+    </div>
+</div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Header from './views/header/main/index.vue'
-import Silder from './views/silder/main/index.vue'
-
+import {
+    Component,
+    Vue
+} from 'vue-property-decorator'
+import AppHeader from './views/header/main/index.vue'
+import AppSilder from './views/silder/main/index.vue'
 
 @Component({
+    name: 'app',
     components: {
-        Header,
-        Silder,
+        AppHeader,
+        AppSilder,
     },
 })
 export default class App extends Vue {}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    .main{
+      width: 100%;
+      height: calc(100vh - 50px);
+      display: flex;
+    }
 }
 </style>

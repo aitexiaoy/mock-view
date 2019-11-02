@@ -4,13 +4,16 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
+import './components'
 import 'ant-design-vue/dist/antd.css'
 
 Vue.config.productionTip = false
 Vue.use(Antd)
 
-new Vue({
+const appVue=new Vue({
     router,
     store,
     render: h => h(App),
 }).$mount('#app')
+
+window.appVue = appVue
